@@ -13,16 +13,17 @@ Device tree for TWRP(only) with proper BoardConfig and .fstab...
 
 ### Set up
 - Sync CyanogenMod source tree
-- Sync TWRP source tree to <cm_tree>/bootable/recovery
-- Sync device kernel source to <cm_tree>/kernel/lenovo/msm8974
-- Sync device tree to <cm_tree>/device/lenono/kingdom_row
-- Copy init.rc from <cm_tree>/device/lenovo/kingdom_row/recovery/ to <cm_tree>/bootable/recovery/etc/ (overwrite)
+- Sync TWRP source tree to **[cm_tree]/bootable/recovery/**
+- Sync device kernel source to **[cm_tree]/kernel/lenovo/msm8974/**
+- Copy contents of **twrp_android_device_lenovo_kingdom_row/** to **[cm_tree]/device/lenono/kingdom_row/**
+- Copy init.rc from **[cm_tree]/device/lenovo/kingdom_row/recovery/** to **[cm_tree]/bootable/recovery/etc/** (overwrite)
 - Set busybox to built as static binary
-  - Add/Change these in busybox-full.config and busybox-minimal.config in /external/busybox/
+  - Add/Change these in **busybox-full.config** and **busybox-minimal.config** in **[cm_tree]/external/busybox/**
 ```
  CONFIG_STATIC=y
  CONFIG_EXTRA_LDFLAGS="-static"
 ```
+- Copy contents of **gui/** to **[cm_tree]/bootable/recovery/gui/** (overwrite)
 
 ### Build
 ```
