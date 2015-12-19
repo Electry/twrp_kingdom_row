@@ -1,0 +1,3 @@
+allow location_app system_app_data_file:dir { getattr ioctl open read search };
+allow location_app anr_data_file:dir { search add_name getattr ioctl open read remove_name write };
+allow location_app anr_data_file:file { append open getattr ioctl lock read write };

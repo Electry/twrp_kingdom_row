@@ -1,0 +1,2 @@
+allow rfs_access rfs_system_file:file { getattr ioctl lock open read };
+allow rfs_access sysfs_wake_lock:file { append open write getattr ioctl lock read };

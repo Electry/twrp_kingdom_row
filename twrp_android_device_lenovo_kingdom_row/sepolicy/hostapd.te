@@ -1,0 +1,2 @@
+allow hostapd system_server:unix_dgram_socket { sendto };
+allow hostapd system_wpa_socket:sock_file { write };

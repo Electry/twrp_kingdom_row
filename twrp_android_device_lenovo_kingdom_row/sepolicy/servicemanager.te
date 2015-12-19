@@ -1,0 +1,8 @@
+allow servicemanager init:dir { add_name create getattr ioctl link open read remove_name rename reparent rmdir search setattr unlink write };
+allow servicemanager init:file { append create getattr ioctl link lock open read rename setattr unlink write };
+allow servicemanager zygote:dir { add_name create getattr ioctl link open read remove_name rename reparent rmdir search setattr unlink write };
+allow servicemanager zygote:fd { use };
+allow servicemanager zygote:file { append create getattr ioctl link lock open read rename setattr unlink write };
+allow servicemanager zygote:process { getattr };
+allow servicemanager init:process { sigchld getattr };
+allow servicemanager zygote:binder { transfer call };

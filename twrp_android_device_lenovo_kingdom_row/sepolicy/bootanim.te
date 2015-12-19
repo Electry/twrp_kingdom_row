@@ -1,0 +1,23 @@
+allow bootanim mpctl_socket:dir search;
+allow bootanim bootanim:capability { dac_override net_admin sys_boot };
+allow bootanim bootanim:capability2 { block_suspend };
+allow bootanim bootanim:netlink_kobject_uevent_socket { bind create read setopt };
+allow bootanim ctl_default_prop:property_service { set };
+allow bootanim graphics_device:chr_file { ioctl open read write };
+allow bootanim graphics_device:dir { search };
+allow bootanim init:unix_stream_socket { connectto };
+allow bootanim input_device:chr_file { append getattr ioctl lock open read write };
+allow bootanim input_device:dir { append create getattr ioctl link lock open read rename search setattr unlink write };
+allow bootanim mediaserver:fd { use };
+allow bootanim proc_sysrq:file { open write };
+allow bootanim property_socket:sock_file { append getattr ioctl lock open read write };
+allow bootanim shell_exec:file { execute execute_no_trans open read };
+allow bootanim sysfs_wake_lock:file { append getattr ioctl lock open read write };
+allow bootanim system_prop:property_service { set };
+allow bootanim alarm_device:chr_file { getattr ioctl lock open read append write };
+allow bootanim mpctl_socket:sock_file { write read };
+allow bootanim sysfs:file { getattr ioctl lock open read append write };
+allow bootanim sysfs_socinfo:file { getattr ioctl lock open read write };
+allow bootanim system_data_file:file { getattr read ioctl lock open };
+
+unix_socket_send(bootanim, mpctl, perfd)

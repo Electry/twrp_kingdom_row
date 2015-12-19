@@ -1,0 +1,6 @@
+<!-- This is the feature for font switch -->
+<!-- Lenovo-sw FONT linrq1 PATCHROM-126 add 20141204, for font begin -->
+<permissions>
+    <feature name="com.lenovo.theme.fontsupport" />
+</permissions>
+<!-- Lenovo-sw FONT linrq1 PATCHROM-126 add 20141204, for font end -->

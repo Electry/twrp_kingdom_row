@@ -1,0 +1,4 @@
+allow platform_app fuse_device:chr_file { getattr };
+allow platform_app system_app_data_file:file { read write };
+allow platform_app vfat:dir { getattr ioctl open read search add_name create link remove_name rename reparent rmdir setattr unlink write };
+allow platform_app vfat:file { getattr ioctl lock open read append create link rename setattr unlink write };

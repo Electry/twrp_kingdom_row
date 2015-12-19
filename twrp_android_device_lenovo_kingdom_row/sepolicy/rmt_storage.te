@@ -1,0 +1,8 @@
+# Our rmt storage bridges the ssd partition too
+allow rmt_storage ssd_device:blk_file rw_file_perms;
+
+allow rmt_storage ctl_default_prop:property_service { set };
+allow rmt_storage init:unix_stream_socket { connectto };
+allow rmt_storage property_socket:sock_file { write };
+allow rmt_storage sysfs:file { getattr ioctl lock open read append write };
+allow rmt_storage sysfs_wake_lock:file { append open write getattr ioctl lock read };

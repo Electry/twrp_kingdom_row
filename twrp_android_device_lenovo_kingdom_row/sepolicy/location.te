@@ -1,0 +1,3 @@
+allow location rfs_shared_hlos_file:dir { getattr ioctl open read search };
+allow location rfs_shared_hlos_file:file { getattr ioctl lock open read };
+allow location sensors_socket:sock_file { append open write getattr ioctl lock read };

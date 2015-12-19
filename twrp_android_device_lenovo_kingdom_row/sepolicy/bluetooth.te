@@ -1,0 +1,6 @@
+allow bluetooth media_rw_data_file:dir { add_name create getattr ioctl link open read remove_name rename reparent rmdir search setattr unlink write };
+allow bluetooth qmuxd:unix_stream_socket { connectto };
+allow bluetooth qmuxd_socket:dir { add_name create getattr ioctl link open read remove_name rename reparent rmdir search setattr unlink write };
+allow bluetooth qmuxd_socket:sock_file { create getattr read setattr unlink write };
+allow bluetooth servicemanager:fd { use };
+allow bluetooth media_rw_data_file:file { getattr read append create ioctl link lock open rename setattr unlink write };

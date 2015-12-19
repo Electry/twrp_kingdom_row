@@ -1,0 +1,16 @@
+allow zygote ctl_default_prop:property_service { set };
+allow zygote init:unix_stream_socket { connectto };
+allow zygote keychain_data_file:dir { getattr ioctl open read search };
+allow zygote keychain_data_file:file { getattr ioctl lock open read };
+allow zygote property_socket:sock_file { write };
+allow zygote servicemanager:binder { call transfer };
+allow zygote servicemanager:fd { use };
+allow zygote shell_exec:file { execute execute_no_trans open read };
+allow zygote system_prop:property_service { set };
+allow zygote system_server:binder { call transfer };
+allow zygote apk_data_file:dir { getattr search add_name open read remove_name rmdir write };
+allow zygote apk_data_file:file { getattr ioctl lock open read create unlink write };
+allow zygote apk_data_file:lnk_file { getattr ioctl lock open read create unlink };
+allow zygote system_data_file:dir { getattr ioctl open read search add_name remove_name rmdir write };
+allow zygote system_data_file:file { getattr ioctl lock open read unlink write };
+allow zygote system_data_file:lnk_file { getattr ioctl lock open read create unlink write };

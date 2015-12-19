@@ -1,0 +1,4 @@
+allow installd location_app_data_file:fifo_file { getattr relabelfrom relabelto rename setattr unlink };
+allow installd location_app_data_file:file { getattr relabelfrom relabelto rename setattr unlink };
+allow installd location_app_data_file:sock_file { getattr relabelfrom relabelto rename setattr unlink };
+allow installd property_socket:sock_file { write };

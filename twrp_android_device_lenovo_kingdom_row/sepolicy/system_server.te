@@ -1,0 +1,26 @@
+# for CMHardwareService access to TapToWake
+allow system_server proc_touchpanel:file rw_file_perms;
+allow system_server proc_touchpanel:dir { search };
+
+# for CMHardwareService access to VibratorHW
+allow system_server vibeamp_sysfs:file rw_file_perms;
+
+# display tuning
+allow system_server display_sysfs:file rw_file_perms;
+
+# timerfd
+allow system_server rtc_device:chr_file rw_file_perms;
+
+allow system_server firmware_file:file { getattr ioctl lock open read };
+allow system_server graphics_device:chr_file { append getattr ioctl lock open read write };
+allow system_server graphics_device:dir { getattr ioctl open read search };
+allow system_server hostapd:unix_dgram_socket { sendto };
+allow system_server location_app_data_file:file { append getattr ioctl lock open read write };
+allow system_server location_data_file:file { append create getattr ioctl link lock open read rename setattr unlink write };
+allow system_server tee_device:chr_file { append getattr ioctl lock open read write };
+allow system_server zygote:binder { call transfer };
+allow system_server apk_data_file:lnk_file { getattr ioctl lock open read unlink };
+allow system_server audio_device:chr_file { getattr ioctl lock open read append write };
+allow system_server firmware_file:dir { getattr ioctl open read search };
+allow system_server location_socket:sock_file { append getattr ioctl lock open read write create link rename setattr unlink };
+allow system_server sysfs_socinfo:file { getattr ioctl lock open read write };
