@@ -24,6 +24,11 @@ Device tree for TWRP(only) with proper BoardConfig and .fstab...
  CONFIG_EXTRA_LDFLAGS="-static"
 ```
 - Copy contents of **gui/** to **[cm_tree]/bootable/recovery/gui/** (overwrite)
+- To make adb working properly, make sure you change these in **default.prop**
+```
+ro.adb.secure=0
+ro.secure=0
+```
 
 ### Build
 ```
