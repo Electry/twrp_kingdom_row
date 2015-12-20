@@ -10639,13 +10639,13 @@
 			<object type="text" color="%text_actionbar%">
 				<font resource="title" />
 				<placement x="%col1_x_indent%" y="%row1_2_y%" placement="2" />
-				<text>TWRP Materialised</text>
+				<text>TWRP</text>
 			</object>
 
 			<object type="text" color="%text_actionbar%">
 				<font resource="body1" />
 				<placement x="%col1_x_indent%" y="%row1_2_y%" />
-				<text>Recovery gone App</text>
+				<text>Team Win Recovery Project</text>
 			</object>
 
 			<object type="image">
@@ -10662,7 +10662,7 @@
 			<object type="text" color="%text%">
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row2_3_y%" />
-				<text>z31s1g</text>
+				<text>Electry</text>
 			</object>
 
 			<object type="image">
@@ -10696,19 +10696,7 @@
 			<object type="text" color="%text%">
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row4_3_y%" />
-				<text>to "Tasssadar" for always being helpful</text>
-			</object>
-
-			<object type="text" color="%text%">
-				<font resource="body2" />
-				<placement x="%col1_x_indent%" y="%row5_1a_y%" />
-				<text>to "osm0sis" for the Flashify script</text>
-			</object>
-
-			<object type="text" color="%text%">
-				<font resource="body2" />
-				<placement x="%col1_x_indent%" y="%row5_3_y%" />
-				<text>to "DSM_" for the color changing script</text>
+				<text>to "z31s1g" for Materialised theme</text>
 			</object>
 
 			<object type="image">
